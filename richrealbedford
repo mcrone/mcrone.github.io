@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<meta charset="utf-8" />
+<title>GonƎEatinG</title>
+
+</head>
+<body>
+	<div id="header">
+		<h1>GonƎEatinG</h1>
+		<h2>Rich Real Grill Bar</h2>
+	</div>
+	<nav class="clear">
+		<ul>
+			<li><a href="home">Home</a></li>
+			<li><a href="johannesburg"> Johannesburg</a></li>
+			<li><a href="pretoria"> Pretoria</a></li>
+			<li><a href="contactme">Contact me</a></li>
+		</ul>
+
+
+	</nav>
+
+	<div id="title" style="width:300px;height 200px;overflow:hidden;">
+		<p><img src="rgb.jpg" width = "300px" height ="auto" alt="Rich Real Grill Bar"></p>
+		<p><b>Deal: 300g Steak and Chips for R35</b></p>
+		<p><b>Valid on: 06 July 2013</b></p>
+		<p>Time: 16:00-22:00</p>
+		<form action="mail.php" method="post">
+			<label for="name">Name:</label>
+			<input type="name" name="name" class="input" id="name" autocomplete="off" />
+			<label for="email">Email:</label>
+			<input type="email" name="email" class="input" id="email" 
+		autocomplete="off"	/>
+    		<input type="submit" class="buttonStyle" value="Book" />
+    		<input type="hidden" name="button_pressed" value="1" />
+		<form action />
+	</div>
+	<div class="column2" id="mapinfo">
+		<p>Bedford Square, Cnr van der Linde and Smith Street, Bedfordview</p>
+		<iframe width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.co.za/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=rich+real+grill+bar+bedfordview&amp;aq=&amp;sll=52.141285,-0.47842&amp;sspn=0.0571,0.149517&amp;ie=UTF8&amp;hq=rich+real+grill+bar+bedfordview&amp;hnear=&amp;radius=15000&amp;ll=-26.187494,28.125886&amp;spn=0.071946,0.071946&amp;t=m&amp;output=embed"></iframe><br /><small><a href="https://www.google.co.za/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=rich+real+grill+bar+bedfordview&amp;aq=&amp;sll=52.141285,-0.47842&amp;sspn=0.0571,0.149517&amp;ie=UTF8&amp;hq=rich+real+grill+bar+bedfordview&amp;hnear=&amp;radius=15000&amp;ll=-26.187494,28.125886&amp;spn=0.071946,0.071946&amp;t=m" style="color:#0000FF;text-align:left">View Larger Map</a></small>		
+		</div>
+	
+
+	<div id="restaurant">
+		<p>Type of Cuisine: Grillhouse</p>
+		<p>Contact Number: 011 615 4562</p>
+		<p>Special services:</p>
+	</div>
+
+	
+
+	<div id="footer">
+ 		<p></p>
+	</div>
+
+
+<script type="text/javascript" src="prototype.js">
+
+	function sendemail()
+{
+    var url = '/mail.php';
+
+    new Ajax.Request(url,{
+            onComplete:function(transport)
+            {
+                var feedback = transport.responseText.evalJSON();
+                if(feedback.result==0)
+                    alert('There was a problem sending the email, please try again.');
+            }
+        });
+
+}
+</script>
+
+
+
+
+
+</body>
+</html>

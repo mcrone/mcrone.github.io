@@ -1,0 +1,203 @@
+html{
+	overflow-y: scroll;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.buttonStyle{
+	border-radius:4px;
+	border: thin solid #000cff;
+	padding: 5px;
+	background-color: #0090ff;
+	font-weight: bold;
+	color: #000000;
+	width: 75px;
+}
+.buttonStyle:hover{
+	border: thin solid #000cff;
+	background-color: #7fc7ff;
+	color: #000000;
+	cursor: pointer;
+}
+.buttonStyle:active{
+	border: thin solid #000000;
+	background-color: #000000;
+	color: #fff;
+	cursor: pointer;
+}
+
+h1 {
+	text-align: right;
+	margin-right: 2%;
+	margin-left: 65%;
+	font-size: 18;
+	font-family: arial, helvetica, sans-serif;
+	color: #0090ff;
+	border-bottom: 1px double #0090ff;
+}
+
+h2{
+	text-align: left;
+	padding-left: 5%;
+	font-size: 14;
+	color: #0090ff;
+	border-bottom: 1px double #0090ff;
+
+}
+#header{
+	position:fixed;
+	left:0;
+	background-color: #fff;
+	width: 100%;
+
+}
+nav{
+	position: fixed;
+	left:0;
+	width: 100%;
+	background-color: #0090ff;
+}
+
+nav ul{
+	margin: auto;
+	width: 940px;
+	list-style: none;
+}
+nav ul li {
+	float: left;
+}
+
+#mainnav{
+color: #000000;
+}
+
+nav ul li a {
+	display: block;
+	margin-right: 5%;
+	margin-left: 5%;
+	width: 200px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	color: #000000;
+}
+nav ul li a:hover{
+	color: #fff;
+}
+
+#home{
+padding-top: 10%;
+padding-left: 5%;
+
+}
+#content{
+overflow: visible;}
+
+.column1, .column2{
+	width: 38%;
+	min-height: 275px;
+	float: left;
+	padding-left: 2%;
+	margin-top: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
+	overflow: visible;
+	border-right: 1px solid #000000;
+
+}
+
+.directions{
+padding-left: 5%;
+}
+
+#btdirections{
+width: 100px;
+}
+
+.column2{
+margin-right: 0%;}
+
+#footer{
+background-color: #0090ff;
+left:0;
+width: 100%;
+text-align: center;
+margin: 0;
+padding: 0;
+max-height: 35px;
+font-size: 10px;
+line-height: 1px;
+float: left;
+}
+
+#feature, .article{
+height: 10em;
+margin-bottom: 1em;
+}
+
+#contact{
+padding-top: 10%;
+padding-left: 5%;
+
+}
+
+.input{
+	width: 50%;
+	font-size: 120%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 5px 5px 5px 30px;
+	background-repeat: no-repeat;
+	background-position: 8px 9px;
+	display: block;
+	margin-bottom: 10px;
+}
+input:focus, input:hover{
+	background-color: #ffffff;
+	border: 1px solid #b1e1e4;
+}
+#email{
+	background-image: url("email.png");
+}
+
+#title{
+padding-top: 9%;
+padding-left: 5%;
+width: 35%;
+float: left;
+}
+
+#mapinfo{
+padding-top: 4%;
+border: none;
+border-radius: 0px;
+border-left: 1px solid #000000;
+}
+
+#restaurant{
+	float: left;
+	padding-left: 2%;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	overflow: visible;
+	border-top: 4px solid #bdbdbd;
+	width: 90%;
+}
+
+a:link, a:visited{
+text-decoration: none;
+color: #0035cb;
+}
+a:hover{
+text-decoration: none;
+color: #5575cf;
+}
+

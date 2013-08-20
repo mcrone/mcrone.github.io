@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<meta charset="utf-8" />
+<title>GonƎEatinG</title>
+
+</head>
+<body>
+	<div id="header">
+		<h1>GonƎEatinG</h1>
+		<h2><a href="johannesburg"> Johannesburg </a> :: Ocean Basket Eastgate</h2>
+	</div>
+	<nav class="clear">
+		<ul>
+			<li><a href="home">Home</a></li>
+			<li><a href="johannesburg"> Johannesburg</a></li>
+			<li><a href="pretoria"> Pretoria</a></li>
+			<li><a href="contactme">Contact me</a></li>
+		</ul>
+
+
+	</nav>
+
+	<div id="title" style="width:300px;height 200px;overflow:hidden;">
+		<p><img src="ob1.jpg" width = "275px" height ="auto" alt="Ocean Basket"></p>
+		<p><b>Deal: 50% off</b></p>
+		<p><b>Valid on: 6th July 2013</b></p>
+		<p>Time: 14:00-16:00</p>
+		<form action="mail.php" method="post">
+			<label for="name">Name:</label>
+			<input type="name" name="name" class="input" id="name" autocomplete="off" />
+			<label for="email">Email:</label>
+			<input type="email" name="email" class="input" id="email" 
+		autocomplete="off"	/>
+    		<input type="submit" class="buttonStyle" value="Book" />
+    		<input type="hidden" name="button_pressed" value="1" />
+		<form action />
+	</div>
+	<div class="column2" id="mapinfo">
+		<p>Eastgate Shopping Center, Bradford Road, Kensington</p>
+		<iframe width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.co.za/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=+&amp;q=ocean+basket+eastgate&amp;ie=UTF8&amp;hq=ocean+basket+eastgate&amp;hnear=Johannesburg,+Gauteng&amp;ll=-26.179703,28.116931&amp;spn=0.05368,0.153177&amp;t=m&amp;output=embed"></iframe><br /><small><a href="https://www.google.co.za/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=+&amp;q=ocean+basket+eastgate&amp;ie=UTF8&amp;hq=ocean+basket+eastgate&amp;hnear=Johannesburg,+Gauteng&amp;ll=-26.179703,28.116931&amp;spn=0.05368,0.153177&amp;t=m" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	</div>
+	
+
+	<div id="restaurant">
+		<p>Type of Cuisine: Seafood</p>
+		<p>Contact Number: 011 615 4533</p>
+		<p>Special services:</p>
+	</div>
+
+	
+
+	<div id="footer">
+ 		<p></p>
+	</div>
+
+
+<script type="text/javascript" src="prototype.js">
+
+	function sendemail()
+{
+    var url = '/mail.php';
+
+    new Ajax.Request(url,{
+            onComplete:function(transport)
+            {
+                var feedback = transport.responseText.evalJSON();
+                if(feedback.result==0)
+                    alert('There was a problem sending the email, please try again.');
+            }
+        });
+
+}
+</script>
+
+
+
+
+
+</body>
+</html>
